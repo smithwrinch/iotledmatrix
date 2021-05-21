@@ -1,0 +1,44 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://bgrins.github.io/spectrum/spectrum.css' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src='https://bgrins.github.io/spectrum/spectrum.js'></script>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'stylesheet.css' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <div class="col">
+        <h1>IoT LED matrix</h1>
+      </div>
+      <div class="col" id="rightalign">
+
+        <a href="{% url 'hello_world' %}" style="margin-right: 2%;color: gray;font-size: 0.7em;">home</a>
+        <a href="https://www.linkedin.com/in/hans-smith-wrinch-3644a0174/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/smithwrinch/" class="fa fa-instagram"></a>
+      </div>
+    </div>
+    <br><br>
+    <h2> About </h2>
+    <br>
+    <p>I wanted to have a medium where people from anywhere at any time could control the "art" in my room. Inspired by <a href="https://en.wikipedia.org/wiki/Place_(Reddit)">r/place</a>
+      I set up a 64x64 LED matrix on my desk. This matrix is controlled by an esp8266 microcontroller that gets pixel colour data from this website.
+      Using the interface you may manipulate the colours that I will see (which you can see on a short livestream).
+      <br><br>The experiment aims to investigate what sort of patterns (if any) people will send over the open internet for me to see on the physical device
+      next to my laptop. Every five minutes you have the option to reset the matrix - this will also save the pixels to a database. Let's see what people will create...
+      <br>
+      <br>
+      Long me out.
+    </p>
+    <br><br>
+    <h3>There are currently {{count}} saved matrices.</h3>
+    <br><br>
+    <img src="{% static '1.jpg' %}" style="width: 100%;"> </img>
+    <br> <br>
+  </div>
+</body>

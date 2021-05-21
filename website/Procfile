@@ -1,0 +1,1 @@
+web: gunicorn iot_led_matrix.wsgi --log-file -
